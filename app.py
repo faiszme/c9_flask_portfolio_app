@@ -15,11 +15,11 @@ def home_page():
 
 @app.route('/<name>')
 def profile(name):
-	return render_template('index.html', name=name)
+	return render_template('index.html', name= str (name)+ 'you are welcome' )
 
 
 @app.route('/add_numbers', methods=['GET','POST'])
-def add_numbers_post():
+def add_numbers_post(): 
 	  # --> ['5', '6', '8']
 	  # print(type(request.form['text']))
 	  if request.method == 'GET':
